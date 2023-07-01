@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const { Schema } = mongoose;
 
-const userSchema = new Schema({
+const UserSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -19,12 +19,8 @@ const userSchema = new Schema({
     type: String,
     required: false,
   },
-  isSeller: {
-    type: Boolean,
-    required: false,
-  }
 }, {
   timestamps: true,
 });
 
-export default mongoose.model('User', userSchema);
+export default mongoose.model('User', UserSchema);
